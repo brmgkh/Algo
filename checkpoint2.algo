@@ -1,0 +1,30 @@
+ALGORITHM sum_elms_distincts
+VAR
+    tab : ARRAY_OF INTEGER[n];
+    tab2: ARRAY_OF INTEGER[n];
+    i,j,sum: INTEGER;
+BEGIN
+    write("donner la taille des 2 tableaux");
+    read(n);
+    FOR i FROM 0 TO n-1 STEP 1  DO
+        read(tab[i];)
+    END_FOR
+
+FOR j FROM 0 TO n-1 STEP 1  DO
+    write("donner un par un les élément du 2em tableau");
+
+FOR i FROM 0 TO n-1 STEP 1  DO
+
+    IF (tab[j] <> tab[i]) THEN
+    read tab[j];
+    END_IF
+END_FOR
+END_FOR
+sum := 0; 
+FOR i FROM 0 TO n-1 STEP 1  DO
+FOR j FROM 0 TO n-1 STEP 1  DO
+sum := tab[i]+tab[j];    
+END_FOR
+END_FOR
+
+END

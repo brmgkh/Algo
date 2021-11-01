@@ -1,0 +1,35 @@
+ALGORITHM algorithm_name
+VAR
+    c : CHAR ;
+    i : INTEGER:=0;
+    longuer : INTEGER := 0;
+    tab : ARRAY_OF CHAR[10];   
+    nbr_mots:INTEGER:=0;
+    nbr_voyelles:INTEGER:=0;
+BEGIN
+tab := ["a","A","e","E","i","I","u","U","y","Y"]; 
+    REPEAT
+    read (c)
+
+    IF (c=" ") THEN
+        nbr_mots:= nbr_mots+1;
+    END_IF
+
+FOR i FROM 1 TO 10 STEP 1  DO
+    
+ IF ( c = tab[i])  THEN
+     nbr_voyelles:=nbr_voyelles+1;
+ END_IF
+
+END_FOR    
+
+longuer := longuer+1;
+
+
+    UNTIL ( c=".")
+
+
+ write ("la longueur de la phrase est ", longuer);
+ write ("le nbr des mots est ",nbr_mots+1);
+ write ("le nbr des voyelles est ",nbr_voyelles);
+END
